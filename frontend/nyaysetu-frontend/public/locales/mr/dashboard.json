@@ -1,1 +1,127 @@
-{"placeholder": "To be added"}
+{
+  "sidebar": {
+    "collapseSidebar": "साइडबार संकुचित करा",
+    "litigant": {
+      "dashboard": "डॅशबोर्ड",
+      "vakilFriendAI": "न्याय सारथी",
+      "fileCaseFIR": "केस / FIR दाखल करा",
+      "caseDiary": "केस डायरी",
+      "hearings": "सुनावण्या",
+      "lawyerChat": "वकील चॅट",
+      "forensicAnalysis": "फॉरेन्सिक विश्लेषण",
+      "profile": "प्रोफाइल"
+    },
+    "lawyer": {
+      "dashboard": "डॅशबोर्ड",
+      "litigantDirectory": "वादकर्त्यांची यादी",
+      "activeCases": "सक्रिय खटले",
+      "aiLegalAssistant": "AI कायदेशीर सहाय्यक",
+      "hearings": "सुनावण्या",
+      "analytics": "विश्लेषण",
+      "profile": "प्रोफाइल"
+    },
+    "judge": {
+      "judicialOverview": "न्यायिक आढावा",
+      "myDocket": "माझी डॉकेट",
+      "unassignedPool": "असाइन न केलेले खटले",
+      "liveHearing": "लाईव्ह सुनावणी",
+      "courtAnalytics": "कोर्ट विश्लेषण",
+      "profile": "प्रोफाइल"
+    },
+    "admin": {
+      "dashboard": "डॅशबोर्ड",
+      "userManagement": "वापरकर्ता व्यवस्थापन",
+      "caseManagement": "केस व्यवस्थापन",
+      "judgeAssignment": "न्यायाधीश नियुक्ती",
+      "reports": "अहवाल",
+      "settings": "सेटिंग्ज",
+      "profile": "प्रोफाइल"
+    },
+    "techAdmin": {
+      "dashboard": "डॅशबोर्ड",
+      "aiModels": "AI मॉडेल्स",
+      "videoSystem": "व्हिडिओ प्रणाली",
+      "logs": "लॉग्स",
+      "configuration": "कॉन्फिगरेशन",
+      "profile": "प्रोफाइल"
+    },
+    "police": {
+      "dashboard": "डॅशबोर्ड",
+      "investigationUnit": "तपास युनिट",
+      "uploadFIR": "FIR अपलोड करा",
+      "myFIRs": "माझ्या FIRs",
+      "profile": "प्रोफाइल"
+    }
+  },
+  "litigant": {
+    "fileCaseFIR": "केस / FIR दाखल करा",
+    "fileCaseDesc": "Nyay Saarthi च्या AI सहाय्याने नागरी केस किंवा फौजदारी FIR दाखल करा",
+    "getStarted": "सुरू करा",
+    "pendingApprovals": "प्रलंबित मंजुरी",
+    "reviewDraft": "ड्राफ्ट तपासा",
+    "actionRequired": "कारवाई आवश्यक",
+    "sentBy": "पाठवलेले",
+    "awaitingSignature": "तुमच्या डिजिटल स्वाक्षरीची प्रतीक्षा",
+    "viewDetails": "तपशील पहा",
+    "approveSign": "मंजूर करा आणि ई-साइन करा",
+    "myCases": "माझे खटले",
+    "upcomingHearings": "आगामी सुनावण्या",
+    "documents": "दस्तऐवज",
+    "legalChat": "कायदेशीर चॅट",
+    "active": "सक्रिय",
+    "chatWithLawyer": "वकिलाशी चॅट करा",
+    "thisMonth": "+1 या महिन्यात",
+    "newDocs": "+2 नवीन",
+    "recentCases": "अलीकडील खटले",
+    "viewAll": "सर्व पहा",
+    "noCases": "अजून कोणतेही खटले नाहीत",
+    "fileFirstCase": "पहिला खटला दाखल करा",
+    "filed": "दाखल केले",
+    "noUpcomingHearings": "आगामी सुनावण्या नाहीत",
+    "hearingsAppearHere": "सुनावण्या येथे दिसतील",
+    "joinVirtualCourt": "व्हर्च्युअल कोर्टमध्ये सामील व्हा",
+    "startsIn": "{{minutes}} मिनिटांत सुरू होईल",
+    "loading": "लोड होत आहे..."
+  },
+  "lawyer": {
+    "dashboard": "डॅशबोर्ड",
+    "clientManagement": "क्लायंट व्यवस्थापन",
+    "activeCases": "सक्रिय खटले",
+    "aiAssistant": "AI कायदेशीर सहाय्यक",
+    "hearings": "सुनावण्या",
+    "analytics": "विश्लेषण",
+    "profile": "प्रोफाइल"
+  },
+  "judge": {
+    "judicialOverview": "न्यायिक आढावा",
+    "myDocket": "माझी डॉकेट",
+    "unassignedPool": "असाइन न केलेले खटले",
+    "courtAnalytics": "कोर्ट विश्लेषण"
+  },
+  "police": {
+    "dashboard": "पोलीस डॅशबोर्ड",
+    "investigationUnit": "तपास युनिट",
+    "uploadFIR": "FIR अपलोड करा",
+    "myFIRs": "माझ्या FIRs"
+  },
+  "common": {
+    "dashboard": "डॅशबोर्ड",
+    "welcomeBack": "परत स्वागत आहे",
+    "viewProfile": "प्रोफाइल पहा",
+    "language": "भाषा",
+    "search": "शोधा...",
+    "notifications": "सूचना",
+    "profile": "प्रोफाइल",
+    "logout": "लॉगआउट",
+    "loading": "लोड होत आहे...",
+    "next": "पुढे",
+    "previous": "मागे",
+    "submit": "सबमिट करा",
+    "cancel": "रद्द करा",
+    "save": "जतन करा",
+    "delete": "हटवा",
+    "edit": "संपादित करा",
+    "viewAll": "सर्व पहा",
+    "noData": "कोणताही डेटा उपलब्ध नाही"
+  }
+}

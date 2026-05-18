@@ -322,7 +322,9 @@ export const translations = {
 };
 
 export function LanguageProvider({ children }) {
-    const [language, setLanguage] = useState('en');
+    const [language, setLanguage] = useState(
+    () => localStorage.getItem('language') || 'en'
+);
 
     const changeLanguage = (lang) => {
     setLanguage(lang);

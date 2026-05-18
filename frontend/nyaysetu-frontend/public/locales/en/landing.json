@@ -1,5 +1,27 @@
 {
      
+    "trustStats": {
+  "activeUsers": "Active Users",
+  "successRate": "Success Rate",
+  "availability": "Availability"
+},
+"quickCards": {
+  "createAccount": {
+    "title": "Create Account",
+    "desc": "Create your account in seconds and activate access — no paperwork required.",
+    "cta": "Get Started"
+  },
+  "submitCase": {
+    "title": "Submit Your Case",
+    "desc": "File your cases from anywhere with secure document management.",
+    "cta": "Get Started"
+  },
+  "powerfulFeatures": {
+    "title": "Powerful Features",
+    "desc": "Access AI-powered legal tech with real-time tracking and transparency.",
+    "cta": "Get Started"
+  }
+},
     "hero": {
         "badge": "INDIA'S FIRST AI-POWERED JUDICIARY PLATFORM",
         "installApp": "Install App",
@@ -79,23 +101,7 @@
         "ctaText": "🎯 Ready to experience the future of justice?",
         "ctaButton": "Start Your Journey"
     },
-    "quickCards": {
-    "createAccount": {
-        "title": "Create Account",
-        "desc": "Create your account and activate your access in seconds — no paperwork required.",
-        "cta": "Get Started"
-    },
-    "submitCase": {
-        "title": "Submit Your Case",
-        "desc": "Submit your cases from anywhere with secure document management.",
-        "cta": "Get Started"
-    },
-    "powerfulFeatures": {
-        "title": "Powerful Features",
-        "desc": "Access AI-powered legal tech with real-time tracking and transparency.",
-        "cta": "Get Started"
-    }
-    },
+     
     "footer": {
         "tagline": "India's first AI-powered virtual judiciary platform, making justice accessible to every citizen.",
         "quickLinks": "Quick Links",

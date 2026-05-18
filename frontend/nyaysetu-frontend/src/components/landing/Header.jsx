@@ -224,6 +224,7 @@ export default function Header({ hideAuthButtons = false }) {
                     >
                         <option value="en">English</option>
                         <option value="hi">Hindi</option>
+                        <option value="mr">Marathi</option>
                         <option value="ta">Tamil</option>
                         <option value="te">Telugu</option>
                         <option value="ml">Malayalam</option>
