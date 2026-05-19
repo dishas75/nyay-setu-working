@@ -7,6 +7,7 @@ import NotificationBell from '../components/NotificationBell';
 
 export default function DashboardHeader({ user, isMobile, onMobileMenuToggle }) {
     const [showProfileMenu, setShowProfileMenu] = useState(false);
+    const [showLangDropdown, setShowLangDropdown] = useState(false);
     const { logout } = useAuthStore();
     const navigate = useNavigate();
     const { t, i18n } = useTranslation('dashboard');

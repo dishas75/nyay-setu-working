@@ -19,6 +19,7 @@ export default function Header({ hideAuthButtons = false }) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [showAIModal, setShowAIModal]            = useState(false);
     const [roleOpen, setRoleOpen]                  = useState(false);
+    const [langOpen, setLangOpen] = useState(false);
     const { theme, toggleTheme }                   = useTheme();
     const { t, i18n }                              = useTranslation('common');
     const location                                 = useLocation();
@@ -39,6 +40,7 @@ export default function Header({ hideAuthButtons = false }) {
         document.addEventListener('mousedown', close);
         return () => document.removeEventListener('mousedown', close);
     }, [roleOpen]);
+    
 
     const navItems = [
         { labelKey: 'header.nav.home',        href: '/',            isRoute: true },
@@ -207,29 +209,99 @@ export default function Header({ hideAuthButtons = false }) {
                 </div>
                 {/* CTA Buttons */}
                 <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }} className="desktop-cta">
+                    
                     {/* Language Dropdown */}
-                    <select
-                        value={i18n.language}
-                        onChange={(e) => i18n.changeLanguage(e.target.value)}
+<div style={{ position: 'relative' }} id="lang-selector">
+    <button
+        onClick={() => setLangOpen(o => !o)}
+        style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.35rem',
+            padding: '0 0.9rem',
+            height: '38px',
+            background: 'var(--bg-surface)',
+            border: '1px solid var(--border-medium)',
+            borderRadius: '8px',
+            color: 'var(--color-primary)',
+            fontSize: '0.875rem',
+            fontWeight: '600',
+            cursor: 'pointer',
+            fontFamily: 'inherit',
+            transition: 'all 0.2s ease',
+            boxShadow: '0 4px 20px rgba(139, 92, 246, 0.12)',
+        }}
+        onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--color-primary)'; }}
+        onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border-medium)'; }}
+    >
+        {[
+            { value: 'en', label: 'English' },
+            { value: 'hi', label: 'Hindi' },
+            { value: 'mr', label: 'Marathi' },
+            { value: 'ta', label: 'Tamil' },
+            { value: 'te', label: 'Telugu' },
+            { value: 'ml', label: 'Malayalam' },
+            { value: 'kn', label: 'Kannada' },
+        ].find(l => l.value === i18n.language)?.label ?? 'English'}
+        <ChevronDown size={14} style={{ transform: langOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }} />
+    </button>
+
+    <AnimatePresence>
+        {langOpen && (
+            <motion.div
+                initial={{ opacity: 0, y: -6 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -6 }}
+                transition={{ duration: 0.15 }}
+                style={{
+                    position: 'absolute',
+                    top: 'calc(100% + 6px)',
+                    left: 0,
+                    background: 'var(--bg-surface)',
+                    border: '1px solid var(--border-medium)',
+                    borderRadius: '8px',
+                    overflow: 'hidden',
+                    minWidth: '130px',
+                    zIndex: 100,
+                    boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
+                }}
+            >
+                {[
+                    { value: 'en', label: 'English' },
+                    { value: 'hi', label: 'Hindi' },
+                    { value: 'mr', label: 'Marathi' },
+                    { value: 'ta', label: 'Tamil' },
+                    { value: 'te', label: 'Telugu' },
+                    { value: 'ml', label: 'Malayalam' },
+                    { value: 'kn', label: 'Kannada' },
+                ].map(lang => (
+                    <button
+                        key={lang.value}
+                        onClick={() => { i18n.changeLanguage(lang.value); setLangOpen(false); }}
                         style={{
-                            padding: '0.6rem 1rem',
-                            background: 'transparent',
-                            border: '1px solid #CBD5E1',
-                            borderRadius: '10px',
-                            color: 'var(--color-primary)',
+                            display: 'block',
+                            width: '100%',
+                            padding: '9px 14px',
+                            background: i18n.language === lang.value ? 'var(--bg-hover)' : 'transparent',
+                            color: i18n.language === lang.value ? 'var(--color-primary)' : 'var(--text-main)',
+                            border: 'none',
+                            textAlign: 'left',
+                            fontSize: '0.875rem',
+                            fontWeight: i18n.language === lang.value ? '600' : '500',
                             cursor: 'pointer',
-                            fontWeight: '600',
-                            fontSize: '0.875rem'
+                            fontFamily: 'inherit',
+                            transition: 'background 0.15s ease',
                         }}
+                        onMouseEnter={e => e.currentTarget.style.background = 'var(--bg-hover)'}
+                        onMouseLeave={e => e.currentTarget.style.background = i18n.language === lang.value ? 'var(--bg-hover)' : 'transparent'}
                     >
-                        <option value="en">English</option>
-                        <option value="hi">Hindi</option>
-                        <option value="mr">Marathi</option>
-                        <option value="ta">Tamil</option>
-                        <option value="te">Telugu</option>
-                        <option value="ml">Malayalam</option>
-                        <option value="kn">Kannada</option>
-                    </select>
+                        {lang.label}
+                    </button>
+                ))}
+            </motion.div>
+        )}
+    </AnimatePresence>
+</div>
 
                         
 
